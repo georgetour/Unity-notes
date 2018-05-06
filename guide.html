@@ -1354,8 +1354,53 @@ Finally we add at the keyframe where the object we want to be .
  
  <h2>Sprite Sheet animation</h2>
  
- <p>Sprite Sheet animation is based in multiple sprites that follow each other like cartoons frames(flipbook).</p>
+ <p>Sprite Sheet animation is based in multiple sprites that follow each other like cartoons frames(flipbook).
+ To use it they must be in transparent bakcground and in the editor we must choose Sprite Mode-> Multiple.
+ </p>
  
+ <img class="small-image" src="images/chapter23/spritesheets.jpg">
+ 
+ <p>Then we click sprite editor and we choose the layout(many times automatic slices them nicely) :</p>
+ 
+  <img class="small-image" src="images/chapter23/sprite_editor.jpg">
+ 
+ <p>After we have created these sprite sheets we must use an avatar as the main sprite(something neutral). We create an empty object add a sprite renderer and add the sprite in it or move the sprite directly in the object. 
+ </p>
+ <img class="small-image" src="images/chapter23/avatar_sprite.jpg">
+ 
+ <p>We add an animator to the object :</p>
+  <img class="small-image" src="images/chapter23/add_animator.jpg">
+<p>Of course we need a controller since alone it doesn t do anything.</p>
+
+   <img class="small-image" src="images/chapter23/animation_controller.jpg">
+   
+<p>We add the controller to animator by drag and dropping.</p>  
+   
+   <img class="small-image" src="images/chapter23/animation_controller_to_animator.jpg">
+   
+<p>Double click in animation controller to enter it.</p>    
+<img class="small-image" src="images/chapter23/enter_animation.jpg">
+ 
+ <p>We need to give animation a state which says when the animation will do something and have an easy layout to work.</p>  
+ <img class="small-image" src="images/chapter23/animation_layout.jpg">
+  
+  <p>Then we need to add a clip for animation.</p>  
+ <img class="small-image" src="images/chapter23/add_new_clip.jpg"> 
+   
+   <p>After we save the clip we will see it appearing in controller and in project.</p>  
+ <img class="small-image" src="images/chapter23/clip_added.jpg"> <br><br>
+ <img class="small-image" src="images/chapter23/add_a_clip.jpg">  
+    
+<p>We can drag and drop teh sprites in animation.<br><strong>Be careful though to have selected the object the animation belongs to.</strong></p>  
+ <img class="small-image" src="images/chapter23/putting_sprites_in_animation.jpg"> 
+	
+<p>To preview th animation you can either play the scene or double click the controller and add the object that has the animation.
+To rotate the camera right mouse button. </p>  
+ <img class="small-image" src="images/chapter23/preview_animation.jpg"> 
+	
+<p>We can change the speed of animation by changing the samples. </p>  
+ <img class="small-image" src="images/chapter23/animation_speed.jpg">   
+  
  <h3>Bone-based animation</h3>
  <p>Is the one that you use pivots to split sprites and make them move relative to one other.</p>
  
