@@ -266,6 +266,7 @@ Scene currentScene = SceneManager.GetActiveScene();
 <p>Also it has a render mode which is how the canvas is rendered in our scene</p>
 <p>As you see in <br><br><img class="small-image" src="images/canvas.jpg"><br><br> we have some properties like Screen Space – Overlay, Screen Space – Camera, World Space</p>
 <p>With Screen Space – Overlay means that the canvas is what is rendered first in scene</p>
+<p>With World space – It means we want canvas to be part of the play space not just a menu or something</p>
 <p>You can anchor an element as you see in <br><br><img class="small-image" src="images/text_anchoring.jpg"><br></p>
 <p>You can resize the ui by having pressed the u mode as shown in <br><br><img class="small-image" src="images/ui_mode.jpg"><br></p>
 <p>Holding Alt key whilce resizing the element it will scale more smoothly</p>
@@ -692,6 +693,9 @@ public static Singleton Instance
 <h3>World Units/Play space total</h3>
 <p>Move the camera for the object from left to right to see how many world units is as shown in <br><br><img class="small-image" src="images/world_units.jpg"><br><br> and subsctract the – position with + position</p>
 
+
+
+
 <h3>Sprite Editor</h3>
 <p>To enter Sprite Editor mode pick the image and then click sprite editor as show in <br><br><img class="small-image" src="images/sprite_editor.jpg"><br> and change pivot to bottom left so it will fit exactly at the frame in bottom left</p>
 
@@ -702,6 +706,10 @@ https://forum.unity.com/threads/standard-screen-resolution-for-pc-mac-game.29258
 
 <h3>Camera size</h3>
 <p>Camera has a Size property which means how many world units is from the center to the top of the camera as you can see in <br><br><img class="small-image" src="images/camera_size.jpg"><br> </p>
+
+<p><strong>The size of the camera must be half the vertical size in world units</strong>. So below we have 7 world units so the camera should be 3.5</p>
+
+<img class="small-image" src="images/camera_size2.jpg">
 
 <h3>Pixels per unit</h3>
 <p>They have to do with physics etc so you have to be accurate</p>
@@ -1136,7 +1144,7 @@ Player will know that hitting them shows progress</p>
 
 <img class="small-image" src="images/chapter16/raw_image_texture.jpg">
 
-<p>We can choose how the texture will repeat by the options UV React :</p>
+<p>We can choose how the texture will repeat by the options UV Rect :</p>
 
 <img class="small-image" src="images/chapter16/increase_repeat_textures.jpg">
 
@@ -1513,6 +1521,12 @@ Assets/AssetStoreTools*</code></pre>
 </tbody>
 </table>
 
+<p>A 4:3 ration means 4 columns wide 3 height. Almost square. IT's the same with 4/3 or 1.333.</p>
+
+<p>To go from 4:3 to 16:9. So if 17cm is the height since the width is bigger and we want 16:9 we do 17 * 16/9. Else if we want it smaller 17 * 9/16. </p>
+
+<p>If we have a 16:9 screen with 4 cm high how wide is it? It will be 7.11cm. We divide 9/4 = 2.25 and then we divide 16/2.25 so the analogy is the same.</p>
+
 <p>So the most common is 16:9.</p>
 <p>The options we have is :</p>
 <ol>
@@ -1530,6 +1544,22 @@ Assets/AssetStoreTools*</code></pre>
 For example in our image below we don t want the text to go above the tree in the right: 
 <p>
 <img class="small-image "src="images/chapter26/text-aspect-ratio.jpg">
+ 
+ <h2>UI Panel</h2>
+ <p>A UI panel helps us see how something will look in different sizes. You must reset it in the cog button so you can get width and height.</p>
+ 
+ <img class="small-image" src="images/chapter26/ui_panel.jpg">
+ 
+<p>So if we wanted to see how our game will look in 4:3 :</p>
+ 
+  <img class="small-image" src="images/chapter26/ui_panel_look.jpg">
+ 
+ 
+ <h2>Coordinate system</h2>
+<p>Check glitch garden game to see how scaling and sizes work.</p>
+ 
+ 
+ 
  </section>
  
  <section>
